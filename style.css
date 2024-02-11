@@ -1,0 +1,495 @@
+/* ------------Reset------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 62.5%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* --------------Root------------- */
+
+:root {
+  --blk: #000;
+  --gryDrk: #312f2f;
+  --gryFooter: #635f5f;
+  --gryLght: #9c9c9c;
+  --wht: #fff;
+}
+
+/* -----------Fonts------------ */
+html {
+  font-family: "Figtree", sans-serif;
+}
+
+.writtenName {
+  font-family: "Dancing Script", cursive;
+}
+
+/* -------------Buttons------------- */
+
+/* .bn3637 {
+  align-items: center;
+  backface-visibility: hidden;
+  border: 0.3rem solid transparent;
+  border-radius: 3rem;
+  color: var(--ivory);
+  display: inline-flex;
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  justify-content: center;
+  letter-spacing: 2px;
+  padding: 0.7rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px var(--gryDrk);
+}
+
+.bn36 {
+  border-color: var(--ivory);
+  box-shadow: 1px 1px 3px var(--gry);
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.bn36:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+} */
+
+/* ----------Jonas btn---------- */
+
+.btn:link,
+.btn:visited {
+  border-radius: 10rem;
+  display: inline-block;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1.6px;
+  padding: 1.4rem 4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-wht {
+  background-color: var(--wht);
+  color: var(--gryDrk);
+}
+
+/* -------------css for website--------------- */
+body {
+  background-color: var(--blk);
+}
+
+main {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+main#home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Figtree", sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  position: absolute;
+  text-align: center;
+}
+
+main.imageWrapper {
+  background: url("https://source.unsplash.com/120saQ--Leg");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+h1 span.writtenName {
+  color: var(--wht);
+  font-family: "Dancing Script", cursive;
+  font-size: 10rem;
+  text-shadow: 2px 2px 4px var(--gryDrk);
+  padding-bottom: 2rem;
+  position: relative;
+  top: -5rem;
+}
+
+/* ------------nav bar------------ */
+
+.hamburger__nav-menu {
+  display: none;
+}
+
+.nav {
+  align-items: center;
+  background-color: var(--blk);
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 4rem 0 8rem 0;
+  position: relative;
+}
+
+.nav-logo h1 {
+  color: var(--wht);
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 5rem;
+  position: absolute;
+  top: 63px;
+  text-shadow: 1px 1px 2px var(--gryLght);
+}
+
+.nav-btns .nav-menu {
+  display: flex;
+  gap: 13rem;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.store__nav-btn,
+.nav-item > a.nav-btn {
+  color: var(--gryLght);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 9.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+a.nav-btn:hover,
+.store__nav-btn:hover {
+  color: var(--wht);
+}
+
+a.nav-btn.highlight,
+a.nav-btn:active,
+.store__nav-btn.highlight {
+  color: var(--wht);
+  font-weight: 600;
+}
+
+/* ----------Gallery section---------- */
+
+.container {
+  align-content: flex-start;
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: 1260px;
+}
+
+.cube {
+  /*   flex-basis: 400px;
+  flex-grow: 1;
+  flex-shrink: 1; */
+  height: 50rem;
+  overflow: hidden;
+  width: 400px;
+  flex: 1 1 auto;
+}
+
+aside > img {
+  min-width: 100%;
+  width: 400px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* image overlay */
+.cube .image__wrapper {
+  position: relative;
+}
+
+.overlay__text {
+  align-items: center;
+  background-color: rgba(105, 102, 102, 0.712);
+  color: var(--wht);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.overlay__text:hover {
+  opacity: 1;
+}
+
+.overlay__text-header {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+}
+
+/* -------Another World--------- */
+#canvas {
+  max-width: 1260px;
+  margin: 0px auto;
+  padding: 35px;
+}
+
+#canvas > img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: scale-down;
+  object-position: center center;
+}
+
+.canvas__img {
+  margin-bottom: 5rem;
+}
+
+.canvas__img-title {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.canvas__img-title p {
+  color: var(--gryLght);
+  font-size: 1.6rem;
+  letter-spacing: 1.6px;
+}
+
+/* --------Footer---------- */
+#footer {
+  align-items: center;
+  background-color: var(--blk);
+  color: var(--gryFooter);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  justify-content: flex-end;
+  margin: 0 auto;
+  max-width: 1260px;
+  min-height: 20rem;
+  position: relative;
+}
+
+/* -------------Social----------- */
+.container__social {
+  text-align: center;
+  display: flex;
+  margin-bottom: 5rem;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+  background: var(--gryFooter);
+  margin: 10px;
+  border-radius: 30%;
+  color: var(--wht);
+  box-shadow: 0 5px 15px -5px #00000070;
+  position: relative;
+  overflow: hidden;
+}
+.icon i {
+  /* line-height: 35px; */
+  font-size: 25px;
+  padding: 5px 3px;
+  transition: 0.2s;
+}
+.icon:hover i {
+  transform: scale(1.1);
+  color: var(--gryFooter);
+}
+.icon::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: var(--wht);
+  left: -110%;
+  top: 90%;
+  transform: rotate(45deg);
+}
+.icon:hover::before {
+  animation: animation 0.7s 1 forwards;
+}
+@keyframes animation {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 15%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
+/* Store Header */
+
+.store__header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.store__header h3 {
+  color: var(--gryLght);
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+}
+
+.store__header-nav {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.container__store-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.store__nav-btn {
+  text-decoration: none;
+  color: var(--gryLght);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  line-height: 1;
+}
+
+/* -----store gallery product info----- */
+.product__meta {
+  height: 10rem;
+  color: var(--gryLght);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+  letter-spacing: 1.6px;
+}
+
+h4.title {
+  font-weight: 400;
+}
+
+p.price {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
